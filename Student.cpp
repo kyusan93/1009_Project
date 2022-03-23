@@ -8,11 +8,14 @@ void Student::displayStudentData() {
   cout << 
 }
 
+void Student::setIdNum(int idNum) {
+  this->idNum = idNum;
+}
 
-void Student::setIdNum(int)
 
-
-void Student::setLastName(string)
+void Student::setLastName(string) {
+  this->lastName = lastName;
+}
 
 
 void Student::setGradePointAverage(double)

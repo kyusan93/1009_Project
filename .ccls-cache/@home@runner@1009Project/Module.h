@@ -8,7 +8,9 @@ class Module{
   private:
   	string moduleName; 
   	int moduleCode;
-  	int credits;
+  	int credit;
+    double costOfModule;
+    int grade;
   	Professor moduleIC;
   public:
     Module(string, int, int, Professor);
@@ -16,8 +18,10 @@ class Module{
   	void setModuleName(string);
   	int getModuleCode();
   	void setModuleCode(int);
-  	int getCredits();
-  	void setCredits(int);
+  	int getCredit();
+  	void setCredit(int);
+    double getCostOfModule();
+    void setCostOfModule(double);
     Professor getProfessor();
   	void setProfessor(Professor);
 }

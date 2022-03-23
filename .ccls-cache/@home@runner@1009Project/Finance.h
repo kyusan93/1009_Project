@@ -1,13 +1,16 @@
 #include <iostream>
 #include <string>
 
-class Finance {
+class Finance : public Student{
   private:
+    double totalAmount;
     double outstandingAmount;
     bool paymentStatus;
-
   public:
-    double makePayment(double amount);
+    Finance(double, bool)
+    double calculateTotalAmount();
+    double getOutstandingAmount();
+    void setOutstandingAmount(double);
     double getPaymentStatus();
     void setPaymentStatus(bool);
 }

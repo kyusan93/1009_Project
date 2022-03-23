@@ -1,9 +1,10 @@
 #include "Module.h"
 
-Module::Module(string moduleName, int moduleCode, int credits, Professor moduleIC) {
+Module::Module(string moduleName, int moduleCode, int credit, double costOfModule, Professor moduleIC) {
   this->moduleName = moduleName;
   this->moduleCode = moduleCode;
-  this->credits = credits;
+  this->credit = credit;
+  this->costOfModule = costOfModule;
   this->moduleIC = moduleIC;
 }
 
@@ -23,18 +24,26 @@ void Module::setModuleCode(int moduleCode){
   this->moduleCode = moduleCode;
 }
 
-int Module::getCredits(){
-  return this->credits;
+int Module::getCredit(){
+  return this->credit;
 }
 
-void Module::setCredits(int credits){
-  this->credits = credits;
+void Module::setCredit(int credit){
+  this->credit = credit;
 }
 
-Professor Module::getCredits(){
-  return this->credits;
+string Module::getCostOfModule() {
+  return this->costOfModule;
 }
 
-void Module::setCredits(int){
-  return this->credits;
+void Module::setCostOfModule() {
+  this->costOfModule = costOfModule;
+}
+
+Professor Module::getProfessor(){
+  return this->credit;
+}
+
+void Module::setProfessor(Professor moduleIC){
+  this->moduleIC = moduleIC;
 }

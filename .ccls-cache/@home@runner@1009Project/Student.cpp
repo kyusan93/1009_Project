@@ -9,10 +9,14 @@ void Student::displayStudentData() {
 }
 
 
-void Student::setIdNum(int)
+void Student::setIdNum(int) {
+  
+}
 
 
-void Student::setLastName(string)
+void Student::setLastName(string) {
+  
+}
 
 
 void Student::setGradePointAverage(double)

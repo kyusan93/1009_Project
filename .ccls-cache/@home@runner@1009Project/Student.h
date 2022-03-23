@@ -13,7 +13,7 @@ class Student : public Person{
 	  Module moduleList[5];
     Finance finance;
   public:
-    Student(int, St);
+    Student(int, string, Module, Finance);
     void displayStudentData();
     void setIdNum(int);
     void setLastName(string);
