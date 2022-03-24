@@ -1,5 +1,8 @@
-#include <iostream>
-#include <string>
+#pragma once
+
+#ifndef PROFESSOR_H
+#define PROFESSOR_H
+
 #include "Person.h"
 
 using namespace std;
@@ -9,13 +12,22 @@ class Professor : public Person {
     string designation;
     string department;
     double salary; 
+
   public:
-    Professor(string, string, string, int, string, string, string, double);
-    void setDesignation(string);
+    Professor(string name, string dateOfBirth, string gender, int contactNumber, string email, string designation, string department, double salary);
+
+    // Getter
     string getDesignation();
-    void setDepartment(string);
     string getDepartment();
+    double getSalary();
+
+    // Setter
+    void setDesignation(string);
+    void setDepartment(string);
     void setSalary(double);
-    double getSalary(double);
-    void displayProf();
+
+    // Abstract printInfo ??? what is this OOP?
+    void printInfo();
 };
+
+#endif

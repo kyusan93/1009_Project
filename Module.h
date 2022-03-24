@@ -1,10 +1,13 @@
-#include <iostream>
-#include <string>
+#pragma once
+
+#ifndef MODULE_H
+#define MODULE_H
+
 #include "Professor.h"
 
 using namespace std;
 
-class Module{
+class Module : public Professor {
   private:
   	string moduleName; 
   	int moduleCode;
@@ -25,3 +28,5 @@ class Module{
     Professor getProfessor();
   	void setProfessor(Professor);
 }
+
+#endif

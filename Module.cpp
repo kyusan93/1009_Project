@@ -1,11 +1,7 @@
 #include "Module.h"
 
-Module::Module(string moduleName, int moduleCode, int credit, double costOfModule, Professor moduleIC) {
-  this->moduleName = moduleName;
-  this->moduleCode = moduleCode;
-  this->credit = credit;
-  this->costOfModule = costOfModule;
-  this->moduleIC = moduleIC;
+Module::Module(const string &ame, string moduleName, int moduleCode, int credit, double costOfModule, Professor moduleIC) {
+  
 }
 
 string Module::getModuleName() {

@@ -6,8 +6,9 @@
 #include "Module.h"
 #include "Finance.h"
 
-
 using namespace std;
+
+void menu();
 
 int main() {
   int mainChoice;
@@ -29,11 +30,11 @@ int main() {
 	cout << "\nEnter Your Choice: ";
 	cin >> mainChoice;
 
-	Student student;
-	Professor professor;
-	Person person;
-	Module module;
-  Finance finance;
+	// Person student = new Student();
+	// Professor professor;
+	// Person person;
+	// Module module;
+ //  Finance finance;
 
 	if (mainChoice == 1)
 	{
@@ -46,11 +47,13 @@ int main() {
 		system("CLS");
 		if (inChoice == 1)
 		{
-			student.setStudentData();
+  
 		}
 		else if (inChoice == 2)
 		{
-			student.displayStudentData();
+			Person *qus = new Student("Qus", "07/02/1996", "Male", 90666567,
+                      "2102345@sit.SingaporeTech.edu.sg", 1000.00, 1000.00, false, 2102345);
+      qus->printInfo();
 		}
 		else
 		{
@@ -69,11 +72,11 @@ int main() {
 	}
 	else if (mainChoice == 2)
 	{
-		cabs.cabDetails();
+    
 	}
 	else if (mainChoice == 3)
 	{
-		booking.hotels();
+
 	}
 	else if (mainChoice == 4)
 	{

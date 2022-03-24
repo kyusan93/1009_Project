@@ -1,38 +1,48 @@
 #include "Professor.h"
+#include <iostream>
 
-Professor::Professor(string name, string dateOfBirth, string gender, int contactNumber, string email, string designation, string department, double salary): Person(name, dateOfBirth, gender, contactNumber, email)
-{
+using namespace std;
+
+// Constructor
+Professor::Professor(string name, string dateOfBirth, string gender, int contactNumber, string email, string designation, string department, double salary) : Person(name, dateOfBirth, gender, contactNumber, email) {
   this->designation = designation;
   this->department = department;
   this->salary = salary;
 }
 
-void Professor::setDesignation(string designation) {
-  this->designation = designation;
+// Getter
+string Professor::getDesignation() {
+  return designation;
 }
 
-string Professor::getDesignation(){
-  return designation;
+string Professor::getDepartment() {
+  return department;
+}
+
+double Professor::getSalary() {
+  return salary;
+}
+
+// Setter
+void Professor::setDesignation(string designation) {
+  this->designation = designation;
 }
 
 void Professor::setDepartment(string department) {
   this->department = department;
 }
 
-string Professor::getDepartment(){
-  return department;
-}
-
 void Professor::setSalary(double salary) {
   this->salary = salary;
 }
 
-double Professor::getSalary(){
-  return salary;
-}
-
-void Professor::displayProf()
-{
-  cout << "Profession Name: " << endl;
+// Abstract printInfo ??? what is this OOP?
+void Professor::printInfo() {
+  cout << "Type: Professor" << endl;
+  Person::printInfo();
+  cout << "Designation: " << designation << endl;
+  cout << "Department: " << department << endl;
+  cout << "Salary: " << salary << endl;
+  cout << "\n" << endl;
 }
 
