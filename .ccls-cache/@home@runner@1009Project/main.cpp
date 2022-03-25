@@ -1,12 +1,12 @@
 #include <iostream>
 #include <string>
+#include <chrono>
+#include <thread>
+#include <stdlib.h>
 #include "Student.h"
 #include "Professor.h"
 #include "Person.h"
 #include "Finance.h"
-#include <chrono>
-#include <thread>
-#include <stdlib.h>
 
 using namespace std;
 
