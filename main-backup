@@ -1,0 +1,134 @@
+#include <iostream>
+#include <string>
+#include "Student.h"
+#include "Professor.h"
+#include "Person.h"
+#include "Module.h"
+#include "Finance.h"
+#include <chrono>
+#include <thread>
+
+//For windows
+#include<Windows.h>
+
+using namespace std;
+
+int menu() {
+  int mainChoice;
+  cout << "----------------------------Main Menu----------------------------" << endl;
+
+	cout << "\t_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _" << endl;
+	cout << "\t|\t\t\t\t\t|" << endl;
+	cout << "\t|\tWho would you like to view?\t|" << endl;
+	cout << "\t|\t1. Student\t|" << endl;
+	cout << "\t|\t2. Professor\t|" << endl;
+	cout << "\t|\t3. Exit			-> 5\t|" << endl;
+	cout << "\t|\t\t\t\t\t|" << endl;
+	cout << "\t_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " << endl;
+
+	cout << "\nEnter Your Choice: ";
+	cin >> mainChoice;
+  return mainChoice;
+};
+
+int main() {
+  int mainChoice;
+	int inChoice; 
+	int gotoMenu;
+
+	cout << "\t\t		* Welcome to 09 University Management Systems\n" << endl;
+  mainChoice = menu();
+
+	// Person student = new Student();
+	// Professor professor;
+	// Person person;
+	// Module module;
+ //  Finance finance;
+
+	if (mainChoice == 1)
+	{
+		cout << "------Student------\n" << endl;
+		cout << "1. Enter New Student" << endl;
+		cout << "2. See current Students" << endl;
+
+		cout << "\nEnter Choice: ";
+		cin >> inChoice;
+		system("CLS"); //windows command
+		if (inChoice == 1)
+		{
+  
+		}
+		else if (inChoice == 2)
+		{
+			Person *qus = new Student("Qus", "07/02/1996", "Male", 90666567,
+                      "2102345@sit.SingaporeTech.edu.sg", 1000.00, 1000.00, false, 2102345);
+      qus->printInfo();
+		}
+		else
+		{
+			cout << "Invalid Input! Redirecting to Previous Menu \nPlease Wait!" << endl;
+      this_thread::sleep_for(chrono::milliseconds(1100));
+      menu();
+      /*Windows Command
+      Sleep(1100);
+			system("CLS");*/
+			
+		}
+		cout << "\nPress 1 to Redirect to Main Menu: ";
+		cin >> gotoMenu;
+		system("CLS"); //windows command
+		if (gotoMenu == 1)
+		{
+			menu();
+		}
+	}
+	else if (mainChoice == 2)
+	{
+    
+	}
+	else if (mainChoice == 3)
+	{
+
+	}
+	else if (mainChoice == 4)
+	{
+		cout << "==>Get Receipt <--" << endl;
+		cout << "To display the receipt on the screen, Enter 1: or Enter any key to return to Main Menu: ";
+
+		cin >> gotoMenu;
+
+		if (gotoMenu == 1)
+		{
+			system("CLS"); //windows command
+			// charges.showBill();
+			cout << "\nPress 1 to return to Main Menu: ";
+			cin >> gotoMenu;
+			system("CLS"); //windows command
+			if (gotoMenu == 1)
+			{
+				menu();
+			}
+			else
+			{
+				menu();
+			}
+		}
+		else
+		{
+			system("CLS"); //windows command
+			menu();
+		}
+	}
+	else if (mainChoice == 5)
+	{
+		cout << "--GOOD BYE--" << endl;
+		this_thread::sleep_for(chrono::milliseconds(999));
+    menu();
+    
+    /*For Windows
+    Sleep(999);
+		system("CLS");
+    */
+
+	}
+}

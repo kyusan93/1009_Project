@@ -24,7 +24,7 @@ class Student : public Person, public Finance {
     // Setter
     void setStudentId(int);
     // void setGradePointAverage(double);
-
+	
     // Abstract printInfo ??? what is this OOP?
     void printInfo();
 };

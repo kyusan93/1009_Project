@@ -3,20 +3,32 @@
 #ifndef FINANCE_H
 #define FINANCE_H
 
-#include "Student.h"
+#include <string>
 
-class Finance : public Student {
+using namespace std;
+
+class Finance {
   private:
     double totalAmount;
     double outstandingAmount;
     bool paymentStatus;
+
   public:
-    Finance(double, double, bool);
-    double calculateTotalAmount();
+    Finance(double totalAmount, double outstandingAmount, bool paymentStatus);
+
+    // Getter
+    double getTotalAmount();
     double getOutstandingAmount();
-    void setOutstandingAmount(double);
     double getPaymentStatus();
+
+    // Setter
+    void setTotalAmount(double);
+    void setOutstandingAmount(double);
     void setPaymentStatus(bool);
-}
+
+    // Abstract printInfo ??? what is this OOP?
+	  double calulateStatement();
+    void printInfo();
+};
 
 #endif

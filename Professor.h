@@ -28,6 +28,7 @@ class Professor : public Person {
 
     // Abstract printInfo ??? what is this OOP?
     void printInfo();
+	void getStudentGPA(int studentList[], int studentID);
 };
 
 #endif
