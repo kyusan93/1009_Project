@@ -3,12 +3,23 @@
 #include <chrono>
 #include <thread>
 #include <stdlib.h>
+#include <cstdlib>
 #include "Student.h"
 #include "Professor.h"
 #include "Person.h"
 #include "Finance.h"
 
 using namespace std;
+
+void clear_screen()
+{
+#ifdef WINDOWS
+    std::system("cls");
+#else
+    // Assume POSIX
+    std::system ("clear");
+#endif
+}
 
 int main() {
 
@@ -32,7 +43,9 @@ int main() {
 	cout << "\t|\tWho would you like to view?\t  |" << endl;
 	cout << "\t|\t1. Student                \t  |" << endl;
 	cout << "\t|\t2. Professor              \t  |" << endl;
-	cout << "\t|\t3. Exit		            \t  |" << endl;
+  cout << "\t|\t3. Module		              \t  |" << endl;
+  cout << "\t|\t4. Administrative View \t  |" << endl;
+	cout << "\t|\t. Exit		                \t  |" << endl;
 	cout << "\t|\t\t\t\t\t              |" << endl;
 	cout << "\t_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " << endl;
 
@@ -53,7 +66,7 @@ int main() {
 
 		cout << "\nEnter Choice: ";
 		cin >> inChoice;
-		system("CLS");
+		clear_screen();
 		if (inChoice == 1)
 		{
   
@@ -67,12 +80,12 @@ int main() {
 		{
 			cout << "Invalid Input! Redirecting to Previous Menu \nPlease Wait!" << endl;
       this_thread::sleep_for(chrono::milliseconds(1100));
-			system("CLS");
+			clear_screen();
 			main();
 		}
 		cout << "\nPress 1 to Redirect to Main Menu: ";
 		cin >> gotoMenu;
-		system("CLS");
+		clear_screen();
 		if (gotoMenu == 1)
 		{
 			main();
@@ -86,7 +99,7 @@ int main() {
 
 		cout << "\nEnter Choice: ";
 		cin >> inChoice;
-		system("CLS");
+		clear_screen();
 
     if (inChoice == 1)
 		{
@@ -101,12 +114,12 @@ int main() {
 		{
 			cout << "Invalid Input! Redirecting to Previous Menu \nPlease Wait!" << endl;
       this_thread::sleep_for(chrono::milliseconds(1100));
-			system("CLS");
+			clear_screen();
 			main();
 		}
 		cout << "\nPress 1 to Redirect to Main Menu: ";
 		cin >> gotoMenu;
-		system("CLS");
+		clear_screen();
 		if (gotoMenu == 1)
 		{
 			main();
@@ -125,7 +138,7 @@ int main() {
 
 		if (gotoMenu == 1)
 		{
-			system("CLS");
+			clear_screen();
 			// charges.showBill();
 			cout << "\nPress 1 to return to Main Menu: ";
 			cin >> gotoMenu;
@@ -141,7 +154,7 @@ int main() {
 		}
 		else
 		{
-			system("CLS");
+			clear_screen();
 			main();
 		}
 	}
@@ -149,7 +162,7 @@ int main() {
 	{
 		cout << "--GOOD BYE--" << endl;
 		this_thread::sleep_for(chrono::milliseconds(999));
-		system("CLS");
+		clear_screen();
 		main();
 	}
 }

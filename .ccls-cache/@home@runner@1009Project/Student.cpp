@@ -27,6 +27,8 @@ void Student::printInfo() {
   cout << "Type: Student" << endl;
   Person::printInfo();
   cout << "Student ID: " << studentId << endl;
+}
+void Student::printFinanceInfo() {
   Finance::printInfo();
   cout << "\n" << endl;
 }

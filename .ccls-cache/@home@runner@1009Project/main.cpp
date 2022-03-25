@@ -32,7 +32,9 @@ int main() {
 	cout << "\t|\tWho would you like to view?\t  |" << endl;
 	cout << "\t|\t1. Student                \t  |" << endl;
 	cout << "\t|\t2. Professor              \t  |" << endl;
-	cout << "\t|\t3. Exit		            \t  |" << endl;
+  cout << "\t|\t3. Module		              \t  |" << endl;
+  cout << "\t|\t4. Administrative View \t  |" << endl;
+	cout << "\t|\t. Exit		                \t  |" << endl;
 	cout << "\t|\t\t\t\t\t              |" << endl;
 	cout << "\t_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " << endl;
 

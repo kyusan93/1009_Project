@@ -27,6 +27,8 @@ class Student : public Person, public Finance {
 	
     // Abstract printInfo ??? what is this OOP?
     void printInfo();
+
+    void printFinanceInfo();
 };
 
 #endif
