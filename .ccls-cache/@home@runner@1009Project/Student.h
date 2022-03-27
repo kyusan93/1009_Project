@@ -1,8 +1,5 @@
 #pragma once
 
-#ifndef STUDENT_H
-#define STUDENT_H
-
 #include "Person.h"
 #include "Finance.h"
 // #include "Module.h"
@@ -30,5 +27,3 @@ class Student : public Person, public Finance {
 
     void printFinanceInfo();
 };
-
-#endif

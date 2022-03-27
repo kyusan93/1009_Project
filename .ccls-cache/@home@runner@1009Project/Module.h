@@ -1,8 +1,5 @@
 // #pragma once
 
-// #ifndef MODULE_H
-// #define MODULE_H
-
 // #include "Professor.h"
 
 // using namespace std;
@@ -28,5 +25,3 @@
 //     Professor getProfessor();
 //   	void setProfessor(Professor);
 // }
-
-// #endif

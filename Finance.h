@@ -1,8 +1,5 @@
 #pragma once
 
-#ifndef FINANCE_H
-#define FINANCE_H
-
 #include <string>
 
 using namespace std;
@@ -30,5 +27,3 @@ class Finance {
 	  double calulateStatement();
     void printInfo();
 };
-
-#endif

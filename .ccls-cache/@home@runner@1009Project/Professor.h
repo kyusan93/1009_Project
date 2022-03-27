@@ -1,8 +1,5 @@
 #pragma once
 
-#ifndef PROFESSOR_H
-#define PROFESSOR_H
-
 #include "Person.h"
 
 using namespace std;
@@ -30,5 +27,3 @@ class Professor : public Person {
     void printInfo();
 	void getStudentGPA(int studentList[], int studentID);
 };
-
-#endif

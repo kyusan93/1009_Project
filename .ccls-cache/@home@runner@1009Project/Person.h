@@ -1,8 +1,5 @@
 #pragma once
 
-#ifndef PERSON_H
-#define PERSON_H
-
 #include <string>
 
 using namespace std;
@@ -35,5 +32,3 @@ class Person {
     // Abstract printInfo ??? what is this OOP?
     virtual void printInfo();
 };
-
-#endif
