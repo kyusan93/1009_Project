@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -31,4 +32,6 @@ class Person {
 
     // Abstract printInfo ??? what is this OOP?
     virtual void printInfo();
+    virtual void write_data(string);
+    virtual ofstream update_data(string, string, string, string, int, string, double, double, bool, int);
 };

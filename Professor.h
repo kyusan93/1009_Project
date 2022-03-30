@@ -25,5 +25,9 @@ class Professor : public Person {
 
     // Abstract printInfo ??? what is this OOP?
     void printInfo();
-	void getStudentGPA(int studentList[], int studentID);
+	  void getStudentGPA(int studentList[], int studentID);
+
+    void write_data(string);
+
+    void update_data(string, int, string, string, string, int, string, string, string, double);
 };

@@ -1,29 +1,29 @@
-#pragma once
+// #pragma once
 
-#include <string>
+// #include <string>
 
-using namespace std;
+// using namespace std;
 
-class Finance {
-  private:
-    double totalAmount;
-    double outstandingAmount;
-    bool paymentStatus;
+// class Finance {
+//   private:
+//     double totalAmount;
+//     double outstandingAmount;
+//     bool paymentStatus;
 
-  public:
-    Finance(double totalAmount, double outstandingAmount, bool paymentStatus);
+//   public:
+//     Finance(double totalAmount, double outstandingAmount, bool paymentStatus);
 
-    // Getter
-    double getTotalAmount();
-    double getOutstandingAmount();
-    double getPaymentStatus();
+//     // Getter
+//     double getTotalAmount();
+//     double getOutstandingAmount();
+//     double getPaymentStatus();
 
-    // Setter
-    void setTotalAmount(double);
-    void setOutstandingAmount(double);
-    void setPaymentStatus(bool);
+//     // Setter
+//     void setTotalAmount(double);
+//     void setOutstandingAmount(double);
+//     void setPaymentStatus(bool);
 
-    // Abstract printInfo ??? what is this OOP?
-	  double calulateStatement();
-    void printInfo();
-};
+//     // Abstract printInfo ??? what is this OOP?
+// 	  double calulateStatement();
+//     void printInfo();
+// };

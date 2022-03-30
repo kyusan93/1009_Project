@@ -1,5 +1,9 @@
 #include "Professor.h"
 #include <iostream>
+#include <iomanip>
+#include <cstdio>
+#include <fstream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -46,3 +50,27 @@ void Professor::printInfo() {
   cout << "\n" << endl;
 }
 
+void Professor::write_data(string filename)
+{
+  // file pointer 
+  ofstream fout; 
+
+  // opens an existing csv file or creates a new file. 
+  fout.open(filename, ios::out | ios::app); 
+    
+  // Insert the data to file 
+  fout << name << ","
+       << dateOfBirth << ","
+       << gender << ","
+       << contactNumber << ","
+       << email << ","
+       << designation << ","
+       << department << ","
+       << std::fixed << std::setprecision(2) << salary << ","
+       << ","
+       << "staff"
+       << endl;
+  fout.close();
+}
+
+void Professor::update_data(string filename, int tempContactNumber,string name, string dateOfBirth, string gender, int contactNumber, string email, string designation, string department, double salary){};

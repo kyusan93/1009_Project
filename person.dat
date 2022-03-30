@@ -1,4 +1,6 @@
-Qus,07/02/1996,Male,90666567,2102345@sit.SingaporeTech.edu.sg,1000.00,1000.00,false,2102345,student
-Goh Thiam Aik,01/01/1981,Male,87654321,2102924@sit.SingaporeTech.edu.sg,1000.00,1000.00,false,2102924,student
-Zhang Wei,01/01/1988,Male,91234567,zhang.wei@SingaporeTech.edu.sg,Professor,ICT,12000.00,,staff
-Donny Soh,01/01/1984,Male,91234567,donny.soh@SingaporeTech.edu.sg,Professor,ICT, 16000.00,,staff
+Qus,07/02/1996,Male,90666567,2102345@sit.SingaporeTech.edu.sg,1000.00,1000.00,0,2102345,student,1001,4.5,1002,5.0,1003,4.5,1004,5.0,1005,4.9
+Goh Thiam Aik,01/01/1981,Male,87654321,2102924@sit.SingaporeTech.edu.sg,1000.00,1000.00,0,2102924,student,1001,2.5,1002,3.0,1003,2.5,1004,2.0,1005,2.0
+Zhang Wei,01/01/1988,Male,90000001,zhang.wei@SingaporeTech.edu.sg,Professor,ICT,12000.00,,staff
+Donny Soh,01/01/1984,Male,90000002,donny.soh@SingaporeTech.edu.sg,Professor,ICT, 16000.00,,staff
+BLA BLA SBLACK SHEEP,02/01/1999,Female,90000003,abcdef@sit.SingaporeTech.edu.sg,Professor,ICT,10000.10,,staff
+Phua Min Yao,01/01/1999,Male,91234567,2100680@sit.SingaporeTech.edu.sg,10000.00,10000.00,0,2100680,student,1001,0.00,1002,0.00,1003,0.00,1004,0.00,1005,0.00

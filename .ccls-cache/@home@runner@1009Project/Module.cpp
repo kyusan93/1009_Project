@@ -1,45 +1,49 @@
-// #include "Module.h"
+#include "Module.h"
 
-// Module::Module(const string &ame, string moduleName, int moduleCode, int credit, double costOfModule, Professor moduleIC) {
-  
-// }
+Module::Module(){
+  this->moduleName = "";
+  this->moduleCode = 0;
+  this->credit = 0;
+  this->grade = 0;
+}
 
-// string Module::getModuleName() {
-//   return this->moduleName;
-// }
+Module::Module(string moduleName, int moduleCode, int credit, int grade){
+  this->moduleName = moduleName;
+  this->moduleCode = moduleCode;
+  this->credit = credit;
+  this->grade = grade;
+}
 
-// void Module::setModuleName(string moduleName){
-//   this->moduleName = moduleName;
-// }
+// Getter
+string Module::getModuleName() {
+  return this->moduleName;
+}
 
-// int Module::getModuleCode(){
-//   return this->moduleCode;
-// }
+int Module::getModuleCode(){
+  return this->moduleCode;
+}
 
-// void Module::setModuleCode(int moduleCode){
-//   this->moduleCode = moduleCode;
-// }
+int Module::getCredit(){
+  return this->credit;
+}
 
-// int Module::getCredit(){
-//   return this->credit;
-// }
+double Module::getGrade(){
+  return this->grade;
+}
 
-// void Module::setCredit(int credit){
-//   this->credit = credit;
-// }
+// Setter
+void Module::setModuleName(string moduleName){
+  this->moduleName = moduleName;
+}
 
-// string Module::getCostOfModule() {
-//   return this->costOfModule;
-// }
+void Module::setModuleCode(int moduleCode){
+  this->moduleCode = moduleCode;
+}
 
-// void Module::setCostOfModule() {
-//   this->costOfModule = costOfModule;
-// }
+void Module::setCredit(int credit){
+  this->credit = credit;
+}
 
-// Professor Module::getProfessor(){
-//   return this->credit;
-// }
-
-// void Module::setProfessor(Professor moduleIC){
-//   this->moduleIC = moduleIC;
-// }
+void Module::setGrade(double grade){
+  this->grade = grade;
+}
