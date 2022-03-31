@@ -6,6 +6,19 @@
 
 using namespace std;
 
+Student::Student(string name, string dateOfBirth, string gender, int contactNumber, string email, double totalAmount, double outstandingAmount, bool paymentStatus, int studentId, Module* module)
+: Person(name, dateOfBirth, gender, contactNumber, email){
+  this->studentId = studentId;
+  this->totalAmount = totalAmount;
+  this->outstandingAmount = outstandingAmount;
+  this->paymentStatus = paymentStatus;
+  for (int i=0; i < 5; ++i)
+	{
+	  this->module[i] = module[i];
+    this->module[i].setGrade(0.0);
+	}
+}
+
 // Constructor
 Student::Student(string name, string dateOfBirth, string gender, int contactNumber, string email, int studentId, Module* module)
 : Person(name, dateOfBirth, gender, contactNumber, email){
@@ -35,6 +48,10 @@ double Student::getOutstandingAmount() {
 
 bool Student::getPaymentStatus() {
   return paymentStatus;
+}
+
+Module* Student::getModule() {
+  return module;
 }
 
 // Setter

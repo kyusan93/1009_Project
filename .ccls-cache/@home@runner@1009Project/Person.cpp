@@ -54,7 +54,7 @@ void Person::setEmail(string email) {
   this->email = email;
 }
 
-// Abstract printInfo ??? what is this OOP?
+// Abstract and Polymorphism
 void Person::printInfo() {
   cout << "Name: " << name << endl;
   cout << "Date of Birth: " << dateOfBirth << endl;
@@ -63,7 +63,7 @@ void Person::printInfo() {
   cout << "Email: " << email << endl;
 };
 
-ofstream Person::write_data(string filename, string name, string dateOfBirth, string gender, int contactNumber, string email, double totalAmount, double outstandingAmount, bool paymentStatus, int studentId) {};
+void Person::write_data(string filename){};
 
 ofstream Person::update_data(string filename, string name, string dateOfBirth, string gender, int contactNumber, string email, double totalAmount, double outstandingAmount, bool paymentStatus, int studentId) { 
   // // File pointer 

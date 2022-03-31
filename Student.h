@@ -15,6 +15,7 @@ class Student : public Person {
 	  Module module[5];
 
   public:
+    Student(string name, string dateOfBirth, string gender, int contactNumber, string email, double totalAmount, double outstandingAmount, bool paymentStatus, int studentId, Module module[5]);
     Student(string name, string dateOfBirth, string gender, int contactNumber, string email, int studentId, Module module[5]);
 
     // Getter
@@ -22,6 +23,7 @@ class Student : public Person {
     double getTotalAmount();
     double getOutstandingAmount();
     bool getPaymentStatus();
+    Module* getModule();
 
     // Setter
     void setStudentId(int);

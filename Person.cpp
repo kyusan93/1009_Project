@@ -54,7 +54,7 @@ void Person::setEmail(string email) {
   this->email = email;
 }
 
-// Abstract printInfo ??? what is this OOP?
+// Abstract and Polymorphism
 void Person::printInfo() {
   cout << "Name: " << name << endl;
   cout << "Date of Birth: " << dateOfBirth << endl;

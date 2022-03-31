@@ -8,10 +8,11 @@
 using namespace std;
 
 // Constructor
-Professor::Professor(string name, string dateOfBirth, string gender, int contactNumber, string email, string designation, string department, double salary) : Person(name, dateOfBirth, gender, contactNumber, email) {
+Professor::Professor(string name, string dateOfBirth, string gender, int contactNumber, string email, string designation, string department, double salary, int staffId) : Person(name, dateOfBirth, gender, contactNumber, email) {
   this->designation = designation;
   this->department = department;
   this->salary = salary;
+  this->staffId = staffId;
 }
 
 // Getter
@@ -27,6 +28,10 @@ double Professor::getSalary() {
   return salary;
 }
 
+int Professor::getStaffId() {
+  return staffId;
+}
+
 // Setter
 void Professor::setDesignation(string designation) {
   this->designation = designation;
@@ -38,6 +43,10 @@ void Professor::setDepartment(string department) {
 
 void Professor::setSalary(double salary) {
   this->salary = salary;
+}
+
+void Professor::setStaffId(int staffId) {
+  this->staffId = staffId;
 }
 
 // Abstract printInfo ??? what is this OOP?

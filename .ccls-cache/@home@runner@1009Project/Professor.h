@@ -9,19 +9,22 @@ class Professor : public Person {
     string designation;
     string department;
     double salary; 
+    int staffId;
 
   public:
-    Professor(string name, string dateOfBirth, string gender, int contactNumber, string email, string designation, string department, double salary);
+    Professor(string name, string dateOfBirth, string gender, int contactNumber, string email, string designation, string department, double salary, int staffId);
 
     // Getter
     string getDesignation();
     string getDepartment();
     double getSalary();
+    int getStaffId();
 
     // Setter
     void setDesignation(string);
     void setDepartment(string);
     void setSalary(double);
+    void setStaffId(int);
 
     // Abstract printInfo ??? what is this OOP?
     void printInfo();

@@ -30,8 +30,8 @@ class Person {
     void setContactNumber(int);
     void setEmail(string);
 
-    // Abstract printInfo ??? what is this OOP?
-    virtual void printInfo();
+    // Abstract and Polymorphism
+    virtual void printInfo() = 0;
     virtual void write_data(string);
     virtual ofstream update_data(string, string, string, string, int, string, double, double, bool, int);
 };

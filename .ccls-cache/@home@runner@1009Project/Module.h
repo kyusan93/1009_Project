@@ -12,7 +12,7 @@ class Module {
     double grade;
   public:
     Module();
-    Module(string, int, int, int);
+    Module(string, int, int, double);
 
     // Getter
   	string getModuleName();

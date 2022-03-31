@@ -75,7 +75,7 @@ int main() {
     }
     else if (inChoice == 2) // Print all the current students
     {
-      printAllStudents();
+      printAllStudents("person.dat");
     } 
     else 
     {
@@ -112,11 +112,11 @@ int main() {
     }
     else if (inChoice == 3) // Edit a staff
     {
-      string tempContactNumber;
-      string name, dateOfBirth, gender, email, designation, department, contactNumber, salary;
-      cout << "Enter the Contact Number of the Staff: " << endl;
-      cin >> tempContactNumber;
-      bool staffFound = findStaff("person.dat", tempContactNumber);
+      string tempStaffId;
+      string name, dateOfBirth, gender, email, designation, department, contactNumber, salary, staffId;
+      cout << "Enter the Staff ID to edit: " << endl;
+      cin >> tempStaffId;
+      bool staffFound = findStaff("person.dat", tempStaffId);
       if(staffFound == false)
       {
         cout << "No Record Found!" << endl;
@@ -136,7 +136,8 @@ int main() {
           cout << "6. Designation" << endl;
           cout << "7. Department" << endl;
           cout << "8. Salary" << endl;
-          cout << "9. Finish Editing" << endl;
+          cout << "9. Staff ID" << endl;
+          cout << "10. Finish Editing" << endl;
           
           cout << "\nEnter Choice: ";
           cin >> inChoice;
@@ -145,66 +146,74 @@ int main() {
               cout << "Enter the Name of the Staff: ";
               cin.ignore();
               getline(cin, name);
-              update_staff("person.dat", tempContactNumber, inChoice - 1, name);
+              update_staff("person.dat", tempStaffId, inChoice - 1, name);
               clear_screen();
-              findStaff("person.dat", tempContactNumber);
+              findStaff("person.dat", tempStaffId);
               break;
             case 2:
               cout << "Enter the Date Of Birth of the Staff: " << endl;
               cin.ignore();
               getline(cin, dateOfBirth);
-              update_staff("person.dat", tempContactNumber, inChoice - 1, dateOfBirth);
+              update_staff("person.dat", tempStaffId, inChoice - 1, dateOfBirth);
               clear_screen();
-              findStaff("person.dat", tempContactNumber);
+              findStaff("person.dat", tempStaffId);
               break;
             case 3:
               cout << "Enter the Gender of the Staff: " << endl;
               cin.ignore();
               getline(cin, gender);
-              update_staff("person.dat", tempContactNumber, inChoice - 1, gender);
+              update_staff("person.dat", tempStaffId, inChoice - 1, gender);
               clear_screen();
-              findStaff("person.dat", tempContactNumber);
+              findStaff("person.dat", tempStaffId);
               break;
             case 4:
               cout << "Enter the Contact Number of the Staff: " << endl;
               cin.ignore();
               getline(cin, contactNumber);
-              update_staff("person.dat", tempContactNumber, inChoice - 1, contactNumber);
-              tempContactNumber = contactNumber;
+              update_staff("person.dat", tempStaffId, inChoice - 1, contactNumber);
               clear_screen();
-              findStaff("person.dat", tempContactNumber);
+              findStaff("person.dat", tempStaffId);
               break;
             case 5:
               cout << "Enter the Email of the Staff: " << endl;
               cin.ignore();
               getline(cin, email);
-              update_staff("person.dat", tempContactNumber, inChoice - 1, email);
+              update_staff("person.dat", tempStaffId, inChoice - 1, email);
               clear_screen();
-              findStaff("person.dat", tempContactNumber);
+              findStaff("person.dat", tempStaffId);
               break;
             case 6:
               cout << "Enter the Designation of the Staff: " << endl;
               cin.ignore();
               getline(cin, designation);
-              update_staff("person.dat", tempContactNumber, inChoice - 1, designation);
+              update_staff("person.dat", tempStaffId, inChoice - 1, designation);
               clear_screen();
-              findStaff("person.dat", tempContactNumber);
+              findStaff("person.dat", tempStaffId);
               break;
             case 7:
               cout << "Enter the Department of the Staff: " << endl;
               cin.ignore();
               getline(cin, contactNumber);
-              update_staff("person.dat", tempContactNumber, inChoice - 1, contactNumber);
+              update_staff("person.dat", tempStaffId, inChoice - 1, contactNumber);
               clear_screen();
-              findStaff("person.dat", tempContactNumber);
+              findStaff("person.dat", tempStaffId);
               break;
             case 8:
               cout << "Enter the Salary of the Staff: " << endl;
               cin.ignore();
               getline(cin, salary);
-              update_staff("person.dat", tempContactNumber, inChoice - 1, salary);
+              update_staff("person.dat", tempStaffId, inChoice - 1, salary);
               clear_screen();
-              findStaff("person.dat", tempContactNumber);
+              findStaff("person.dat", tempStaffId);
+              break;
+            case 9:
+              cout << "Enter the Staff ID of the Staff: " << endl;
+              cin.ignore();
+              getline(cin, staffId);
+              update_staff("person.dat", tempStaffId, inChoice - 1, staffId);
+              clear_screen();
+              tempStaffId = staffId;
+              findStaff("person.dat", tempStaffId);
               break;
             default:
               loop = false;
@@ -214,6 +223,7 @@ int main() {
     }
     else 
     {
+      clear_screen();
       cout << "Invalid Input! Redirecting to Previous Menu \nPlease Wait!"
            << endl;
       this_thread::sleep_for(chrono::milliseconds(1100));
@@ -227,7 +237,35 @@ int main() {
       main();
     }
   } else if (mainChoice == 3) {
+    cout << "------Module------\n" << endl;
+    cout << "1. Enter New Module" << endl;
+    cout << "2. See current Module" << endl;
+    cout << "3. Edit Module" << endl;
 
+    cout << "\nEnter Choice: ";
+    cin >> inChoice;
+
+    if (inChoice == 1) {
+      clear_screen();
+      main();
+    } 
+    else if (inChoice == 2){
+      clear_screen();
+      main();
+    }
+    else if (inChoice == 3){
+      clear_screen();
+      main();
+    }
+    else 
+    {
+      cout << "Invalid Input! Redirecting to Previous Menu \nPlease Wait!"
+           << endl;
+      this_thread::sleep_for(chrono::milliseconds(1100));
+      clear_screen();
+      main();
+    }
+    
   } else if (mainChoice == 4) {
     cout << "==>Get Receipt <--" << endl;
     cout << "To display the receipt on the screen, Enter 1: or Enter any key "
